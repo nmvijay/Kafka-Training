@@ -1,6 +1,6 @@
 # Kafka-Training
 
-This project contains examples to showcase the conpcepts of Kafka
+This project contains examples to showcase the concepts of Kafka like
 
 - Kafka Producer
 - Kafka Consumer
