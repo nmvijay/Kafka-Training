@@ -1,15 +1,3 @@
-/*******************************************************
- * Copyright (C) 2004-2017 Exilant Technologies PVT LTD.
- * Email at <{glimpze@exilant.com}>
- *
- * This file is part of Kafka_Consumer
- *
- * Kafka_Consumer can not be copied and/or distributed without the express
- * permission of Exilant Technologies PVT Ltd (WWW.Exilant.com)
- * 23-May-2017
- * StreamPipeDemo.java
- *
- *******************************************************/
 package com.example.kafka.consumer;
 
 import java.util.Arrays;
@@ -30,12 +18,12 @@ import org.apache.kafka.streams.kstream.KStreamBuilder;
  * 
  *         <pre>
  *         1. Create Topics
- *         bin/kafka-topics.sh --create --zookeeper 10.2.3.163:2181 --replication-factor 1 --partitions 1 --topic StreamInTopic
- *         bin/kafka-topics.sh --create --zookeeper 10.2.3.163:2181 --replication-factor 1 --partitions 1 --topic StreamOutTopic
+ *         bin/kafka-topics.sh --create --zookeeper <IP>:2181 --replication-factor 1 --partitions 1 --topic StreamInTopic
+ *         bin/kafka-topics.sh --create --zookeeper <IP>:2181 --replication-factor 1 --partitions 1 --topic StreamOutTopic
  *         2. Subscribe
- *         bin/kafka-console-consumer.sh --bootstrap-server 10.2.3.168:9092 --from-beginning --topic StreamOutTopic
+ *         bin/kafka-console-consumer.sh --bootstrap-server <IP>:9092 --from-beginning --topic StreamOutTopic
  *         3. Publish
- *         bin/kafka-console-producer.sh --broker-list 10.2.3.168:9092 --topic StreamInTopic
+ *         bin/kafka-console-producer.sh --broker-list <IP>:9092 --topic StreamInTopic
  *         </pre>
  */
 public class StreamWordCountExample {
@@ -43,7 +31,7 @@ public class StreamWordCountExample {
 	public static void main(String[] args) throws Exception {
 		Properties props = new Properties();
 		props.put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");
-		props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "10.2.3.168:9092");
+		props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "<IP>:9092");
 		props.put(StreamsConfig.KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
 		props.put(StreamsConfig.VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
 

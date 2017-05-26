@@ -17,7 +17,7 @@ import com.google.common.io.Resources;
  * @author vijayakumar.nm
  * 
  *         <pre>
- * bin/kafka-topics.sh --create --zookeeper 10.2.3.163:2181 --replication-factor 2 --partitions 1 --topic OrdersTopic
+ * bin/kafka-topics.sh --create --zookeeper <IP>:2181 --replication-factor 2 --partitions 1 --topic OrdersTopic
  *         </pre>
  */
 public class OrderProducer {
